@@ -7,7 +7,7 @@ body {
 .cores p {
     width: 80%;
     border: 8px dashed red;
-    margin: 20px auto; /* Removido o espaço extra antes do 'px' */
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -19,7 +19,7 @@ section {
     counter-increment: contador;
 }
 
-.cores::before { /* Removido o espaço entre 'cores' e '::before' */
+.cores::before {
     content: counter(contador);
     display: inline-block;
     margin-bottom: 16px;
@@ -32,37 +32,36 @@ section {
 }
 
 .cores:nth-of-type(3) {
-    background-color: hsl(100deg, 100%, 80%, 0.5); /* Corrigido o valor de hsl() */
-    box-shadow: 10px 10px 6px hsl(100deg, 100%, 50%) inset; /* Adicionado um espaço após a cor */
+    background-color: hsl(100, 100%, 80%);
+    box-shadow: 10px 10px 6px hsl(100, 100%, 50%) inset;
 }
 
 .cores:nth-of-type(3):hover {
-    border-color: hsl(100deg, 100%, 40%);
+    border-color: hsl(100, 100%, 40%);
 }
 
 .cores:nth-of-type(4) {
     background-image: -o-linear-gradient(70deg, blue, transparent),
-                      linear-gradient(to top, red, transparent); /* Adicionado ponto e vírgula */
+                      linear-gradient(to top, red, transparent);
     background-clip: content-box, padding-box;
 }
 
-.cores:nth-of-type(5):hover{
-    background-image: radial-gradient(ellipse,blue 30%,#f008,green 50%,yellow);
+.cores:nth-of-type(5):hover {
+    background-image: radial-gradient(ellipse at center, blue 30%, #f008, green 50%, yellow);
 }
 
-.cores:nth-of-type(6):hover{
-    background-image: radial-gradient(circle,blue 30%,#f008,green 50%,yellow);
+.cores:nth-of-type(6):hover {
+    background-image: radial-gradient(circle at center, blue 30%, #f008, green 50%, yellow);
 }
 
-.cores:nth-of-type(7):hover{
-    background-image: radial-gradient(circle,blue 30%,#f008,green 50%,yellow);
+.cores:nth-of-type(7):hover {
+    background-image: radial-gradient(circle at center, blue 30%, #f008, green 50%, yellow);
 }
 
-.cores:nth-of-type(8):hover{
-    background-image: radial-gradient(circle at 50% 20px, blue,#f00);
+.cores:nth-of-type(8):hover {
+    background-image: radial-gradient(circle at 50% 20px, blue, #f00);
 }
 
-.cores:nth-of-type(9):hover{
-    background-image: radial-gradient(circle at 50% 20px, blue,#f00);
+.cores:nth-of-type(9):hover {
+    background-image: radial-gradient(circle at 50% 20px, blue, #f00);
 }
-
