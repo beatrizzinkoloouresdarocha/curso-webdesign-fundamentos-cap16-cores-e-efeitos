@@ -1,29 +1,47 @@
-body{
+body {
     font-family: sans-serif;
-    background-blend-mode: color;
     background-attachment: fixed;
-    background-image:linear-gradient(blue,red),url(imagem/tile.png)
-    
+    background-image: linear-gradient(blue, red), url(imagem/tile.png);
 }
 
-.cores p{
+.cores p {
     width: 80%;
-    border: 8px dashed #0007;
-    margin:20 px auto;
+    border: 8px dashed red;
+    margin: 20px auto; /* Removido o espaço extra antes do 'px' */
     padding: 20px;
 }
 
-section{
+section {
     counter-reset: contador;
 }
 
-.cores{
+.cores {
     counter-increment: contador;
 }
 
-.cores ::before{
+.cores::before { /* Removido o espaço entre 'cores' e '::before' */
     content: counter(contador);
-    display:inline-block;
+    display: inline-block;
     margin-bottom: 16px;
     font-weight: bold;
+}
+
+.cores:nth-of-type(2) {
+    background-color: red;
+    background-clip: padding-box;
+}
+
+.cores:nth-of-type(3) {
+    background-color: hsl(100deg, 100%, 80%, 0.5); /* Corrigido o valor de hsl() */
+    box-shadow: 10px 10px 6px hsl(100deg, 100%, 50%) inset; /* Adicionado um espaço após a cor */
+}
+
+.cores:nth-of-type(3):hover {
+    border-color: hsl(100deg, 100%, 40%);
+}
+
+.cores:nth-of-type(4) {
+    background-image: -o-linear-gradient(70deg, blue, transparent),
+                      linear-gradient(to top, red, transparent); /* Adicionado ponto e vírgula */
+    background-clip: content-box, padding-box;
 }
