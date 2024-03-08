@@ -45,3 +45,7 @@ section {
                       linear-gradient(to top, red, transparent); /* Adicionado ponto e vírgula */
     background-clip: content-box, padding-box;
 }
+
+.cores:nth-of-type(5):hover{
+    background-image: radial-gradient(blue,red,green);
+}
